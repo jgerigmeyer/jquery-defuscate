@@ -1,6 +1,4 @@
 {
-  "jquery": true,
-
   "curly": true,
   "eqeqeq": true,
   "immed": true,

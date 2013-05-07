@@ -19,9 +19,22 @@
 <body>
   <div id="qunit"></div>
   <div id="qunit-fixture">
-    <span>lame test markup</span>
-    <span>normal test markup</span>
-    <span>awesome test markup</span>
+    <div class="tests">
+      <a href="mailto:test1(which is \'at\' the)test.com" class="email">test1(which is "at" the)test.com</a>
+      <a href="mailto:test2(at)test.eu" class="email">test2(at)test.eu</a>
+      <a href="test.3(still at)test.info" class="email">contact me:test.3(still at)test.info</a>
+      <span class="email">test1(which is /"at/" the)test.com</span>
+      <span class="email">test2(at)test.eu</span>
+      <span class="email">contact me:test.3(still at)test.info</span>
+    </div>
+    <div class="results">
+      <a href="mailto:test1@test.com" class="email">test1@test.com</a>
+      <a href="mailto:test2@test.eu" class="email">test2@test.eu</a>
+      <a href="test.3@test.info" class="email">contact me:test.3@test.info</a>
+      <span class="email"><a href="mailto:test1@test.com">test1@test.com</a></span>
+      <span class="email"><a href="mailto:test2@test.eu">test2@test.eu</a></span>
+      <span class="email">contact me:<a href="mailto:test.3@test.info">test.3@test.info</a></span>
+    </div>
   </div>
 </body>
 </html>
