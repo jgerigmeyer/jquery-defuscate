@@ -11,20 +11,19 @@ Download the [production version][min] or the [development version][max].
 In your web page:
 
 ```html
+<a href="mailto:test1(which is 'at' the)test.com" class="email">test1(which is "at" the)test.com</a>
+<span class="email">test2(still at)test.com</span>
+
 <script src="jquery.js"></script>
 <script src="dist/defuscate.min.js"></script>
 <script>
 jQuery(function($) {
-  $.awesome(); // "awesome"
+  $('.email').defuscate();
+  // <a href="mailto:test1@test.com" class="email">test1@test.com</a>
+  // <span class="email"><a href="mailto:test2@test.com">test2@test.com</a></span>
 });
 </script>
 ```
 
-## Documentation
-_(Coming soon)_
-
-## Examples
-_(Coming soon)_
-
 ## Release History
-_(Nothing yet)_
+0.1.0 - (5/7/2013) Initial beta release
