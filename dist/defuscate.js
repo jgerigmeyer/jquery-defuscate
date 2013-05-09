@@ -1,7 +1,15 @@
-/*! Defuscate - v0.1.0 - 2013-05-07
+/*! Defuscate - v0.1.1 - 2013-05-08
 * https://github.com/jgerigmeyer/jquery-defuscate
 * Copyright (c) 2013 Jonny Gerig Meyer; Licensed MIT */
-(function ($) {
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['jquery'], factory);
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function ($) {
 
     var settings = {};
 
@@ -65,4 +73,4 @@
 
     settings = $.extend({}, $.fn.defuscate.defaults);
 
-}(jQuery));
+}));
