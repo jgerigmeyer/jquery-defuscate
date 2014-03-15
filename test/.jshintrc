@@ -35,6 +35,7 @@
     "notDeepEqual",
     "strictEqual",
     "notStrictEqual",
-    "throws"
+    "throws",
+    "sinon"
   ]
 }

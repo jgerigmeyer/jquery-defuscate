@@ -26,5 +26,7 @@ jQuery(function($) {
 ```
 
 ## Release History
-0.1.1 - (5/8/2013) Add AMD support
-0.1.0 - (5/7/2013) Initial beta release
+
+* 1.0.0 - (3/14/2014) Add bower.json; remove AMD support
+* 0.1.1 - (5/8/2013) Add AMD support
+* 0.1.0 - (5/7/2013) Initial beta release
