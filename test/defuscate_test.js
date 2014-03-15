@@ -1,24 +1,6 @@
 (function ($) {
-    /*
-    ======== A Handy Little QUnit Reference ========
-    http://api.qunitjs.com/
 
-    Test methods:
-        module(name, {[setup][ ,teardown]})
-        test(name, callback)
-        expect(numberOfAssertions)
-        stop(increment)
-        start(decrement)
-    Test assertions:
-        ok(value, [message])
-        equal(actual, expected, [message])
-        notEqual(actual, expected, [message])
-        deepEqual(actual, expected, [message])
-        notDeepEqual(actual, expected, [message])
-        strictEqual(actual, expected, [message])
-        notStrictEqual(actual, expected, [message])
-        throws(block, [expected], [message])
-    */
+    'use strict';
 
     module('jQuery#defuscate', {
         // This will run before each test in this module.
@@ -28,17 +10,17 @@
         }
     });
 
-    test('is chainable', 1, function() {
+    test('is chainable', function() {
         strictEqual(this.elems.defuscate(), this.elems, 'should be chainable');
     });
 
-    test('defuscateHref', 3, function () {
+    test('defuscateHref', function () {
         strictEqual(this.elems.eq(0).defuscate('defuscateHref', this.elems.eq(0).attr('href')), this.results.eq(0).attr('href'));
         strictEqual(this.elems.eq(1).defuscate('defuscateHref', this.elems.eq(1).attr('href')), this.results.eq(1).attr('href'));
         strictEqual(this.elems.eq(2).defuscate('defuscateHref', this.elems.eq(2).attr('href')), this.results.eq(2).attr('href'));
     });
 
-    test('defuscateHtml', 6, function () {
+    test('defuscateHtml', function () {
         strictEqual(this.elems.eq(0).defuscate('defuscateHtml', this.elems.eq(0).html(), true), this.results.eq(0).html());
         strictEqual(this.elems.eq(0).defuscate('defuscateHtml', this.elems.eq(1).html(), true), this.results.eq(1).html());
         strictEqual(this.elems.eq(0).defuscate('defuscateHtml', this.elems.eq(2).html(), true), this.results.eq(2).html());
@@ -47,7 +29,7 @@
         strictEqual(this.elems.eq(0).defuscate('defuscateHtml', this.elems.eq(5).html(), false), this.results.eq(5).html());
     });
 
-    test('updateHref', 3, function () {
+    test('updateHref', function () {
         strictEqual(
             this.elems.eq(0).defuscate('updateHref', this.elems.eq(0), this.results.eq(0).attr('href')).attr('href'),
             this.results.eq(0).attr('href')
@@ -62,7 +44,7 @@
         );
     });
 
-    test('updateHtml', 6, function () {
+    test('updateHtml', function () {
         strictEqual(
             this.elems.eq(0).defuscate('updateHtml', this.elems.eq(0), this.results.eq(0).html()).html(),
             this.results.eq(0).html()
@@ -89,7 +71,7 @@
         );
     });
 
-    test('integration', 1, function () {
+    test('integration', function () {
         strictEqual(this.elems.defuscate().html(), this.results.html());
     });
 
