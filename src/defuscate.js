@@ -2,19 +2,13 @@
  * defuscate
  * https://github.com/jgerigmeyer/jquery-defuscate
  *
- * Copyright (c) 2014 Jonny Gerig Meyer
+ * Copyright (c) 2014, Jonny Gerig Meyer
+ * All rights reserved.
+ *
  * Licensed under the MIT license.
  */
 
-(function (factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['jquery'], factory);
-  } else {
-    // Browser globals
-    factory(jQuery);
-  }
-}(function ($) {
+(function ($) {
 
   'use strict';
 
@@ -84,4 +78,4 @@
 
   settings = $.extend({}, $.fn.defuscate.defaults);
 
-}));
+}(jQuery));
