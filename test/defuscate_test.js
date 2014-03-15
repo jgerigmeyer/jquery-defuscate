@@ -75,4 +75,14 @@
     strictEqual(this.elems.defuscate().html(), this.results.html());
   });
 
+  test('if first arg not a method or object, returns an error', function () {
+    sinon.stub($, 'error');
+    this.elems.eq(0).defuscate('test');
+
+    ok($.error.calledOnce, '$.error was called once');
+    ok($.error.calledWith('Method test does not exist on jQuery.defuscate'), '$.error was passed error msg');
+
+    $.error.restore();
+  });
+
 }(jQuery));
