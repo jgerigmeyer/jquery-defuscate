@@ -1,5 +1,8 @@
 # Defuscate
 
+[![Build Status](https://travis-ci.org/jgerigmeyer/jquery-defuscate.svg?branch=master)](https://travis-ci.org/jgerigmeyer/jquery-defuscate)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 jQuery Email Defuscator Plugin
 
 ## Getting Started
